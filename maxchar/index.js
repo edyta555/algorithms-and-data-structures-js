@@ -18,13 +18,13 @@ const findMostFrequentChar = (numberOfChars) => {
   return maxChar;
 };
 
-function maxChar(str) {
+const maxChar = (str) => {
   const numberOfChars = {};
 
   for (let char of str) {
     numberOfChars[char] = numberOfChars[char] + 1 || 1;
   }
   return findMostFrequentChar(numberOfChars);
-}
+};
 
 module.exports = maxChar;

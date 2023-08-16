@@ -6,13 +6,13 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-function reverse(str) {
+const reverse = (str) => {
   return [...str].reverse().join("");
-}
+};
 
 /*
 //solution 2:
-function reverse(str) {
+const reverse = (str) => {
   let reversed = "";
   for (let sign of str) {
     reversed = sign + reversed;
@@ -20,7 +20,7 @@ function reverse(str) {
   return reversed;
 }
 //solution 3:
-function reverse(str) {
+const reverse = (str) => {
   return str.split("").reduce((reversed, sign) => sign + reversed, "");
 }
 */

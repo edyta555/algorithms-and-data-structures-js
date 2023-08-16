@@ -7,9 +7,9 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {
+const palindrome = (str) => {
   return str.split("").every((sign, i) => sign === str[str.length - i - 1]);
-}
+};
 
 /*
 //solution 2
