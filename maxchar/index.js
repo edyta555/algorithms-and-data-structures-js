@@ -5,14 +5,10 @@
 // maxChar("abcccccccd") === "c"
 // maxChar("apple 1231111") === "1"
 
-function maxChar(str) {
-  const numberOfChars = {};
-  for (let char of str) {
-    numberOfChars[char] = numberOfChars[char] + 1 || 1;
-  }
-
+const findMostFrequentChar = (numberOfChars) => {
   let max = 0;
   let maxChar = "";
+
   for (let char in numberOfChars) {
     if (numberOfChars[char] > max) {
       max = numberOfChars[char];
@@ -20,6 +16,15 @@ function maxChar(str) {
     }
   }
   return maxChar;
+};
+
+function maxChar(str) {
+  const numberOfChars = {};
+
+  for (let char of str) {
+    numberOfChars[char] = numberOfChars[char] + 1 || 1;
+  }
+  return findMostFrequentChar(numberOfChars);
 }
 
 module.exports = maxChar;
